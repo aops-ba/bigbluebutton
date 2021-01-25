@@ -323,8 +323,25 @@ class App extends Component {
     const {
       customStyle, customStyleUrl, openPanel,
     } = this.props;
+
+    const palmersDivStyle = {
+      position: "absolute",
+      left: "100px",
+      top: "100px",
+      fontSize: "80px",
+      backgroundColor: "red",
+      color: "white",
+    };
+    const palmersDiv = (
+      <div style={palmersDivStyle}>
+        Hi, I'm Palmer<br />
+        and I'm taking over.
+      </div>
+    );
+
     return (
       <main className={styles.main}>
+        {palmersDiv}
         {this.renderActivityCheck()}
         {this.renderUserInformation()}
         <BannerBarContainer />
