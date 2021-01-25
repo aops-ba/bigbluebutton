@@ -331,9 +331,13 @@ class App extends Component {
       fontSize: "80px",
       backgroundColor: "red",
       color: "white",
+      zIndex: 10000,
     };
+    if (this.state.clickedPalmersDiv) {
+      palmersDivStyle.display = "none";
+    }
     const palmersDiv = (
-      <div style={palmersDivStyle}>
+      <div style={palmersDivStyle} onClick={() => this.setState({clickedPalmersDiv: true})}>
         Hi, I'm Palmer<br />
         and I'm taking over.
       </div>
